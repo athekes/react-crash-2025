@@ -7,7 +7,7 @@ const JobListings = ({ showAll = true}) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiUrl = showAll ? 'http://localhost:8000/jobs' : 'http://localhost:8000/jobs?_limit=3';
+    const apiUrl = showAll ? '/api/jobs' : '/api/jobs?_limit=3';
 
     const fetchJobs = async () => {
       try {
